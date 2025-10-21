@@ -12,7 +12,7 @@ const HomePage = () => {
           WEAPONS
         </Text>
         <div className={styles.listSection}>
-          <Text color="white">My Arsinal</Text>
+          <Text color="white">My Arsenal</Text>
         </div>
         <div className={styles.searchSection}>
           <SearchInput search />
