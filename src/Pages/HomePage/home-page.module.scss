@@ -1,0 +1,43 @@
+.homePageContainer {
+  display: grid;
+  grid-template-rows: auto 1fr; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "list search";
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  gap: 1rem;
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+  justify-self: center; 
+  align-self: start;    
+  margin-top: 2rem;  
+  font-size: 32px;  
+}
+
+.listSection {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.searchSection {
+  grid-area: search;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-end;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
