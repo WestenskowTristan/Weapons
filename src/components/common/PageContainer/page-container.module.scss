@@ -1,8 +1,9 @@
 .pageContainer {
+  display: flex;
   width: 100%;
   height: 100%;
   padding: 0 !important; 
-  background-color: #1d262f;
+  background: linear-gradient(to bottom right, #0f1419, #202a34);
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;

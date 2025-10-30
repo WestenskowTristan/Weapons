@@ -1,29 +1,27 @@
 import React from "react";
-import Text from "../../components/common/Text";
-import Button from "../../components/common/Button";
 import styles from "./home-page.module.scss";
-import SearchInput from "../../components/common/SearchInput";
+import WeaponCard from "../../components/common/WeaponCard";
+import SearchInput from "../../components/common/Input";
+import AdditionButton from "../../components/common/AdditionButton";
 
 const HomePage = () => {
   return (
-    <>
-      <div className={styles.homePageContainer}>
-        <Text color="white" weight="bold" className={styles.title}>
-          WEAPONS
-        </Text>
-        <div className={styles.listSection}>
-          <Text color="white">My Arsenal</Text>
-        </div>
-        <div className={styles.searchSection}>
-          <SearchInput search />
-          {/* <Button name="search button" size="small">
-          Click here
-        </Button> */}
-        </div>
+    <div className={styles.homePageContainer}>
+      <div className={styles.searchContainer}>
+        <SearchInput
+          className={styles.searchInput}
+          placeholder="Search Your Arsenal"
+        />
+        <AdditionButton className={styles.additionButton} />
       </div>
-      <div>
+      <div className={styles.contentContainer}>
+        <WeaponCard title="Shotgun" ammoType="Buck Shot" />
+        <WeaponCard title="Shotgun" ammoType="Buck Shot" />
+        <WeaponCard title="Shotgun" ammoType="Buck Shot" />
+        <WeaponCard title="Shotgun" ammoType="Buck Shot" />
+        <WeaponCard title="Shotgun" ammoType="Buck Shot" />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import styles from "./search-input.module.scss";
+import styles from "./input.module.scss";
 import Button from "../Button";
 
 type SearchInputProps = {
   search?: boolean;
+  className?: string;
+  placeholder?: string;
 };
 
-const SearchInput = ({ search }: SearchInputProps) => {
+const Input = ({ search, className, placeholder }: SearchInputProps) => {
   const [value, setvalue] = useState("");
 
   const handleChange = (event: any) => {
@@ -16,10 +18,12 @@ const SearchInput = ({ search }: SearchInputProps) => {
   return (
     <div className={styles.inputContainer}>
       <input
-        id="searchInput"
+        id="input"
+        placeholder={placeholder}
         value={value}
         type="text"
         onChange={handleChange}
+        className={`${className ? className : ""} ${styles.input}`}
       />
       {search ? (
         <Button name="search button" size="small">
@@ -30,4 +34,4 @@ const SearchInput = ({ search }: SearchInputProps) => {
   );
 };
 
-export default SearchInput;
+export default Input;

@@ -1,0 +1,12 @@
+.plusButton {
+  width: 100px;
+  height: 100px;
+  background: #917f67 !important;
+  &:hover {
+    background: #4c4235 !important;
+  }
+}
+
+.plusIcon {
+  font-size: 32px;
+}

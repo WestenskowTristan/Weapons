@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./sign-up.module.scss";
 import Text from "../../components/common/Text";
-import SearchInput from "../../components/common/SearchInput";
+import SearchInput from "../../components/common/Input";
 import Button from "../../components/common/Button";
 
 const SignUp = () => {

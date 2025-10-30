@@ -1,43 +1,29 @@
 .homePageContainer {
-  display: grid;
-  grid-template-rows: auto 1fr; 
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "title title"
-    "list search";
-  height: 100vh;
-  padding: 2rem;
-  box-sizing: border-box;
-  gap: 1rem;
-}
-
-.title {
-  grid-area: title;
-  text-align: center;
-  justify-self: center; 
-  align-self: start;    
-  margin-top: 2rem;  
-  font-size: 32px;  
-}
-
-.listSection {
-  grid-area: list;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 20px;
+  gap: 30px;
+  width: 100%;
+  padding: 35px;
+  margin-left: 150px;
 }
 
-.searchSection {
-  grid-area: search;
+.searchContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: flex-end;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 20px;
+  justify-content: space-between;
+}
+
+.searchInput {
+  width: 350px;
+  height: 65px;
+}
+
+.additionButton {
+  width: 65px !important;
+  height: 65px !important;
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
 }
