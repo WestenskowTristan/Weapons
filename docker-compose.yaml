@@ -1,8 +1,8 @@
-version: '3.8'
+version: "3.8"
 networks:
   weapons:
     external: true
-services: 
+services:
   # Running this will mount local source files and watch changes while running in a Docker context.
   ui-dev:
     build:
@@ -13,12 +13,13 @@ services:
     volumes:
       - ./src:/app/src
       - ./public:/app/public
+      - ./vite.config.ts:/app/vite.config.ts
     env_file: .env
     environment:
-      - VITE_WEAPONS_API_ENDPOINT=http://docker.for.mac.localhost:80/
+      - VITE_WEAPONS_API_ENDPOINT=http://weapons-api:80
     ports:
       - 5173:5173
-      
+
   ui:
     build:
       context: .

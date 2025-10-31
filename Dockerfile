@@ -10,6 +10,7 @@ COPY *.json ./
 RUN npm ci
 
 COPY index.html ./
+COPY vite.config.ts ./
 COPY src src
 COPY public public
 
@@ -24,6 +25,7 @@ COPY *.json ./
 RUN npm ci
 
 COPY index.html ./
+COPY vite.config.ts ./
 COPY src src
 COPY public public
 

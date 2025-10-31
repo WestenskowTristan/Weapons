@@ -1,5 +1,4 @@
 import axios, { AxiosInstance } from "axios";
-import { get } from "../utils/env";
 
 export enum WeaponAmmo {
   FiveFiveSix = "556",
@@ -31,7 +30,6 @@ export const weaponsClient = new WeaponsClient(
     paramsSerializer: {
       indexes: null,
     },
-    baseURL: get("VITE_WEAPONS_API_ENDPOINT")
   })
 );
 

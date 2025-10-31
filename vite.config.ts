@@ -1,7 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { get } from "./src/utils/env";
-
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -14,9 +12,10 @@ export default defineConfig({
     },
     proxy: {
       '/api': {
-        target: get("VITE_WEAPONS_API_ENDPOINT"),
+        target: process.env.VITE_WEAPONS_API_ENDPOINT || 'http://weapons-api:80',
         changeOrigin: true,
-        secure: false
+        secure: false,
+        rewrite: (path) => path,  // Keep the full path including /api
       }
     }
   }
