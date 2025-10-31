@@ -3,8 +3,8 @@ import styles from "./weapon-card.module.scss";
 import Text from "../Text";
 
 type WeaponCardProps = {
-  title: string;
-  ammoType: string;
+  title?: string;
+  ammoType?: string;
 };
 
 const WeaponCard = ({ title, ammoType }: WeaponCardProps) => {

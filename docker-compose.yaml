@@ -1,16 +1,21 @@
 version: '3.8'
+networks:
+  weapons:
+    external: true
 services: 
   # Running this will mount local source files and watch changes while running in a Docker context.
   ui-dev:
     build:
       context: .
       target: dev
+    networks:
+      - weapons
     volumes:
       - ./src:/app/src
       - ./public:/app/public
     env_file: .env
     environment:
-      - REACT_APP_BACKEND_URL=http://localhost:80
+      - VITE_WEAPONS_API_ENDPOINT=http://docker.for.mac.localhost:80/
     ports:
       - 5173:5173
       
