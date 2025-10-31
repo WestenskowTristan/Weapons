@@ -7,10 +7,10 @@ WORKDIR /app
 RUN apk add bash
 
 COPY *.json ./
+COPY *.ts ./
 RUN npm ci
 
 COPY index.html ./
-COPY vite.config.ts ./
 COPY src src
 COPY public public
 
@@ -22,10 +22,10 @@ WORKDIR /app
 
 
 COPY *.json ./
+COPY *.ts ./
 RUN npm ci
 
 COPY index.html ./
-COPY vite.config.ts ./
 COPY src src
 COPY public public
 

@@ -13,7 +13,6 @@ services:
     volumes:
       - ./src:/app/src
       - ./public:/app/public
-      - ./vite.config.ts:/app/vite.config.ts
     env_file: .env
     environment:
       - VITE_WEAPONS_API_ENDPOINT=http://weapons-api:80
